@@ -1,0 +1,12 @@
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\EntityFramework.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\EntityFramework.xml
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.csprojAssemblyReference.cache
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb

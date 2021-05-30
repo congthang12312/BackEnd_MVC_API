@@ -42,3 +42,13 @@ C:\Users\ASUS\Desktop\BackEnd_API\API\API\obj\Debug\API.csproj.CoreCompileInputs
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\obj\Debug\API.csproj.CopyComplete
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\obj\Debug\API.dll
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\obj\Debug\API.pdb
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\DatabaseAccess.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\EntityFramework.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\EntityFramework.SqlServer.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\DatabaseAccess.pdb
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\DatabaseAccess.dll.config
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\EntityFramework.xml
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\EntityFramework.SqlServer.xml
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Cors.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Http.Cors.dll
+C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Http.Cors.xml

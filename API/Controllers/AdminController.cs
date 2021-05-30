@@ -5,37 +5,44 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using DatabaseAccess;
+using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
+    [EnableCorsAttribute("*", "*", "*")]
     public class AdminController : ApiController
     {
         // GET: api/Admin
-        IUser user = new UserRepos();
+        IUser userRepos = new UserRepos();
+        [HttpGet]
+        [Route("get-list-user")]
         public IEnumerable<User> Get()
         {
-            return user.findAll();
+            return userRepos.findAll();
         }
 
         // GET: api/Admin/5
-        public string Get(int id)
+        [HttpGet]
+        [Route("get-id-user/{id}")]
+        public User Get(int id)
         {
-            return "value";
+            return userRepos.findIdUser(id);
         }
 
         // POST: api/Admin
-        public void Post([FromBody]string value)
+        [HttpPost]
+        [Route("insert-user")]
+        public Boolean Post([FromBody]User user)
         {
+            return userRepos.insertUser(user);
         }
 
-        // PUT: api/Admin/5
-        public void Put(int id, [FromBody]string value)
+        [HttpPost]
+        [Route("delete-user/{id}")]
+        public Boolean Post([FromUri] int id)
         {
-        }
-
-        // DELETE: api/Admin/5
-        public void Delete(int id)
-        {
+            return userRepos.deleteUser(id);
         }
     }
 }
