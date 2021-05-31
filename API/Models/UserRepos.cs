@@ -76,6 +76,7 @@ namespace API.Models
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
+                if(user != null){ 
                 command.Parameters.Add("@id", SqlDbType.Int).Value = user.id;
                 command.Parameters.Add("@Fullnname", SqlDbType.NVarChar).Value = user.Fullnname;
                 command.Parameters.Add("@Username", SqlDbType.NVarChar).Value = user.Username;
@@ -88,9 +89,11 @@ namespace API.Models
                 int r = command.ExecuteNonQuery();
                 //
                 return true;
+                }return false;
             }
             catch (Exception e)
             {
+                Console.WriteLine(e.Message);
                 return false;
             }
             finally
