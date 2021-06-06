@@ -11,10 +11,11 @@ namespace API.Models
     {
         public static SqlConnection connectDatabase()
         {
-            string connectionString = "Data Source=LAPTOP-7OO41Q78\\DCT;Initial Catalog=Project;Integrated Security=True";
+            string connectionString = "Data Source=ADMIN-PC;Initial Catalog=phonedb;Integrated Security=True";
             //khoi tao sql server
             return new SqlConnection(connectionString);
         }
+
         public List<User> findAll()
         {
             var listUser = new List<User>();
@@ -55,9 +56,9 @@ namespace API.Models
         {
             User user = null;
             List<User> list = findAll();
-            foreach(User index in list)
+            foreach (User index in list)
             {
-                if(index.id == id)
+                if (index.id == id)
                 {
                     user = index;
                 }
@@ -76,20 +77,22 @@ namespace API.Models
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
-                if(user != null){ 
-                command.Parameters.Add("@id", SqlDbType.Int).Value = user.id;
-                command.Parameters.Add("@Fullnname", SqlDbType.NVarChar).Value = user.Fullnname;
-                command.Parameters.Add("@Username", SqlDbType.NVarChar).Value = user.Username;
-                command.Parameters.Add("@Password", SqlDbType.NVarChar).Value = user.Password;
-                command.Parameters.Add("@Adress", SqlDbType.NVarChar).Value = user.Adress;
-                command.Parameters.Add("@Email", SqlDbType.NVarChar).Value = user.Email;
-                command.Parameters.Add("@Phone", SqlDbType.NVarChar).Value = user.Phone;
-                command.Parameters.Add("@CreateDate", SqlDbType.DateTime2).Value = user.CreateDate;
-                // thuc thi cau lenh cho (them xoa sua)
-                int r = command.ExecuteNonQuery();
-                //
-                return true;
-                }return false;
+                if (user != null)
+                {
+                    command.Parameters.Add("@id", SqlDbType.Int).Value = user.id;
+                    command.Parameters.Add("@Fullnname", SqlDbType.NVarChar).Value = user.Fullnname;
+                    command.Parameters.Add("@Username", SqlDbType.NVarChar).Value = user.Username;
+                    command.Parameters.Add("@Password", SqlDbType.NVarChar).Value = user.Password;
+                    command.Parameters.Add("@Adress", SqlDbType.NVarChar).Value = user.Adress;
+                    command.Parameters.Add("@Email", SqlDbType.NVarChar).Value = user.Email;
+                    command.Parameters.Add("@Phone", SqlDbType.NVarChar).Value = user.Phone;
+                    command.Parameters.Add("@CreateDate", SqlDbType.DateTime2).Value = user.CreateDate;
+                    // thuc thi cau lenh cho (them xoa sua)
+                    int r = command.ExecuteNonQuery();
+                    //
+                    return true;
+                }
+                return false;
             }
             catch (Exception e)
             {
@@ -117,7 +120,8 @@ namespace API.Models
                 command.Parameters.Add("@id", SqlDbType.Int).Value = id;
                 int r = command.ExecuteNonQuery();
                 return true;
-            }catch(Exception e)
+            }
+            catch (Exception ex)
             {
                 return false;
             }
@@ -129,6 +133,7 @@ namespace API.Models
                 }
             }
         }
+
         /* public static long Insert(Student st)
 {
     MySqlConnection connection = null;
@@ -180,5 +185,7 @@ namespace API.Models
 
     return id;
 }*/
+
+
     }
 }

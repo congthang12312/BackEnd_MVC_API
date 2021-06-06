@@ -52,3 +52,147 @@ C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\EntityFramework.SqlServer.xml
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Cors.dll
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Http.Cors.dll
 C:\Users\ASUS\Desktop\BackEnd_API\API\API\bin\System.Web.Http.Cors.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\obj\Debug\API.csprojAssemblyReference.cache
+D:\ProjectNetBackend\BackEnd_MVC_API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+D:\ProjectNetBackend\BackEnd_MVC_API\API\obj\Debug\API.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\obj\Debug\API.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\API.dll.config
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\API.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\API.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\csc.exe
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\csc.exe.config
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\csc.rsp
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\csi.exe
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\csi.rsp
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.AppContext.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.Collections.Immutable.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.IO.FileSystem.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\System.Reflection.Metadata.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\vbc.exe
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\vbc.exe.config
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\vbc.rsp
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\VBCSCompiler.exe
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\roslyn\VBCSCompiler.exe.config
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\DatabaseAccess.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\EntityFramework.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\EntityFramework.SqlServer.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Newtonsoft.Json.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Net.Http.Formatting.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Cors.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.Cors.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.WebHost.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\DatabaseAccess.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\DatabaseAccess.dll.config
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\EntityFramework.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\EntityFramework.SqlServer.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.Cors.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Newtonsoft.Json.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Net.Http.Formatting.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Http.WebHost.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\obj\Debug\API.csproj.CopyComplete
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Antlr3.Runtime.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Microsoft.Web.Infrastructure.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Helpers.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Mvc.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Optimization.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Razor.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\WebGrease.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\Antlr3.Runtime.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Helpers.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Mvc.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Optimization.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.Razor.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\API.dll.config
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\API.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\API.pdb
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\csc.exe
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\csc.exe.config
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\csc.rsp
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\csi.exe
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\csi.rsp
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.AppContext.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\vbc.exe
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\vbc.exe.config
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\vbc.rsp
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\VBCSCompiler.exe
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Antlr3.Runtime.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\DatabaseAccess.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\EntityFramework.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\EntityFramework.SqlServer.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Newtonsoft.Json.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Net.Http.Formatting.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Cors.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Helpers.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.Cors.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.WebHost.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Mvc.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Optimization.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Razor.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\WebGrease.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\DatabaseAccess.pdb
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\DatabaseAccess.dll.config
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Antlr3.Runtime.pdb
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\EntityFramework.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\EntityFramework.SqlServer.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Helpers.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.Cors.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Mvc.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Optimization.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Razor.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Newtonsoft.Json.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Net.Http.Formatting.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\System.Web.Http.WebHost.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\obj\Debug\API.csproj.AssemblyReference.cache
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\obj\Debug\API.csproj.CopyComplete
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\obj\Debug\API.dll
+C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\API\obj\Debug\API.pdb
