@@ -10,7 +10,7 @@ namespace API.Models
     interface IUser
     {
         List<User> findAll();
-        User findIdUser(int id);
+        User findIdUser(String id);
 
         Boolean insertUser(User user);
 

@@ -9,18 +9,24 @@ namespace DatabaseAccess
     [Table("Favorite")]
     public partial class Favorite
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
+        [Key]
+        [Column(Order = 0)]
+        [StringLength(40)]
+        public string idUser { get; set; }
 
-        [StringLength(50)]
-        public string name { get; set; }
+        [Key]
+        [Column(Order = 1)]
+        [StringLength(40)]
+        public string idProduct { get; set; }
 
-        public int? price { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? createAt { get; set; }
 
-        [StringLength(50)]
-        public string CreateAt { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? modifyAt { get; set; }
 
-        [StringLength(50)]
-        public string ModifiAt { get; set; }
+        public virtual Product Product { get; set; }
+
+        public virtual User User { get; set; }
     }
 }

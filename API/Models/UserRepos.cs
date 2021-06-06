@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using DatabaseAccess;
@@ -11,10 +12,11 @@ namespace API.Models
     {
         public static SqlConnection connectDatabase()
         {
-            string connectionString = "Data Source=LAPTOP-7OO41Q78\\DCT;Initial Catalog=Project;Integrated Security=True";
+            string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
             //khoi tao sql server
             return new SqlConnection(connectionString);
         }
+
         public List<User> findAll()
         {
             var listUser = new List<User>();
@@ -22,46 +24,65 @@ namespace API.Models
             // sqlcommand cho phep thao tac voi csdl
             SqlCommand sqlCommand = sql.CreateCommand();
             //khai bao cau truy van 
-            sqlCommand.CommandText = "SELECT TOP (1000) [id],[Fullnname],[Username],[Password],[Adress] ,[Email] ,[Phone],[CreateDate] FROM[Project].[dbo].[User]";
+            sqlCommand.CommandText = "SELECT TOP (1000) [id],[fullname],[email],[password],[googleID] ,[facebookID] ,[role],[createAt],[modifyAt] FROM[Project].[dbo].[User]";
             sql.Open();
             // mo ket noi voi database
 
             // thuc thi query
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-            // xu ly cai du lieu tra ve 
-            while (sqlDataReader.Read())
+
+            try
             {
-                User user = new User();
-                for (int i = 0; i < sqlDataReader.FieldCount; i++)
+                while (sqlDataReader.Read())
                 {
-                    // lay ten cot du lieu dang doc 
-                    var colName = sqlDataReader.GetName(i);
-                    //lay gia tri cua cot dang doc
-                    var value = sqlDataReader.GetValue(i);
-                    //lay cai thuoc tinh cua User xem co cot nao giong voi cot hien tai
-                    var property = user.GetType().GetProperty(colName);
-                    if (property != null)
+                    User user = new User();
+                    for (int i = 0; i < sqlDataReader.FieldCount; i++)
                     {
-                        property.SetValue(user, value);
+                        // lay ten cot du lieu dang doc 
+                        var colName = sqlDataReader.GetName(i);
+                        //lay gia tri cua cot dang doc
+                        var value = sqlDataReader.GetValue(i);
+                        //lay cai thuoc tinh cua User xem co cot nao giong voi cot hien tai
+                        var property = user.GetType().GetProperty(colName);
+
+                        if (property != null)
+                        {
+                            if (value == DBNull.Value)
+                            {
+                                property.SetValue(user, null);
+                            }
+                            else {
+                                property.SetValue(user, value);
+                            }
+                        }
                     }
+                    // them doi tuong vo danh sach
+                    listUser.Add(user);
                 }
-                // them doi tuong vo danh sach
-                listUser.Add(user);
             }
+            catch (Exception e)
+            {
+                return listUser;
+                //  Block of code to handle errors
+            }
+            // xu ly cai du lieu tra ve 
+           
             return listUser;
         }
 
-        public User findIdUser(int id)
+       
+
+        public User findIdUser(String id)
         {
             User user = null;
-            List<User> list = findAll();
-            foreach(User index in list)
-            {
-                if(index.id == id)
-                {
-                    user = index;
-                }
-            }
+           // List<User> list = findAll();
+          //  foreach(User index in list)
+          //  {
+            //    if(index.C_id == id)
+         //       {
+              //      user = index;
+            //    }
+           // }
             return user;
 
         }
@@ -77,14 +98,15 @@ namespace API.Models
                 command = connection.CreateCommand();
                 command.CommandText = sql;
                 if(user != null){ 
-                command.Parameters.Add("@id", SqlDbType.Int).Value = user.id;
-                command.Parameters.Add("@Fullnname", SqlDbType.NVarChar).Value = user.Fullnname;
-                command.Parameters.Add("@Username", SqlDbType.NVarChar).Value = user.Username;
-                command.Parameters.Add("@Password", SqlDbType.NVarChar).Value = user.Password;
-                command.Parameters.Add("@Adress", SqlDbType.NVarChar).Value = user.Adress;
-                command.Parameters.Add("@Email", SqlDbType.NVarChar).Value = user.Email;
-                command.Parameters.Add("@Phone", SqlDbType.NVarChar).Value = user.Phone;
-                command.Parameters.Add("@CreateDate", SqlDbType.DateTime2).Value = user.CreateDate;
+                command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
+                command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
+                command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
+                command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
+                command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
+                command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
+                command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
+                command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
                 // thuc thi cau lenh cho (them xoa sua)
                 int r = command.ExecuteNonQuery();
                 //

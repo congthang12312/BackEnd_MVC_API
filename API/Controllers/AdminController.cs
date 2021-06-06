@@ -25,7 +25,7 @@ namespace API.Controllers
         // GET: api/Admin/5
         [HttpGet]
         [Route("get-id-user/{id}")]
-        public User Get(int id)
+        public User Get(String id)
         {
             return userRepos.findIdUser(id);
         }
