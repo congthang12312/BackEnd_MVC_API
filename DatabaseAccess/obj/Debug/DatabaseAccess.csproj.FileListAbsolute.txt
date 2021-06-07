@@ -10,27 +10,15 @@ C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.cs
 C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
 C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
 C:\Users\ASUS\Desktop\BackEnd_API\API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.dll
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.xml
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csprojAssemblyReference.cache
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
-D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.dll
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.xml
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.AssemblyReference.cache
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
-C:\Users\Huyen Trang\Downloads\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.AssemblyReference.cache
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb

@@ -25,7 +25,7 @@ namespace API.Controllers
         
 
         [HttpGet]
-        public Product GetProduct(int id)
+        public Product GetProduct(string id)
         {
             return prodRepos.findIdProduct(id);
 

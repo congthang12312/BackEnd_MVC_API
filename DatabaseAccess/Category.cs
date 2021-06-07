@@ -9,20 +9,34 @@ namespace DatabaseAccess
     [Table("Category")]
     public partial class Category
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Category()
+        {
+            Products = new HashSet<Product>();
+            SubCategories = new HashSet<SubCategory>();
+        }
 
-        [StringLength(50)]
-        public string Name { get; set; }
+        [StringLength(40)]
+        public string id { get; set; }
 
-        [StringLength(50)]
-        public string Slug { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string name { get; set; }
 
-        [StringLength(50)]
-        public string Sub_category { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string slug { get; set; }
 
-        public DateTime? CreateAt { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? createAt { get; set; }
 
-        public DateTime? ModifiAt { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? modifyAt { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Products { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<SubCategory> SubCategories { get; set; }
     }
 }

@@ -55,7 +55,7 @@ namespace API.Models
         }
 
 
-        public Product findIdProduct(int id)
+        public Product findIdProduct(string id)
         {
             Product product = null;
             List<Product> list = listProduct();

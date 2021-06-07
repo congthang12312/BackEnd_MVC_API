@@ -9,6 +9,6 @@ namespace API.Models
     interface IProduct
     {
         List<Product> listProduct();
-        Product findIdProduct(int id);
+        Product findIdProduct(string id);
     }
 }

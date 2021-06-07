@@ -9,30 +9,55 @@ namespace DatabaseAccess
     [Table("Product")]
     public partial class Product
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int id { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Product()
+        {
+            Favorites = new HashSet<Favorite>();
+            History_Buy = new HashSet<History_Buy>();
+        }
 
-        [StringLength(50)]
-        public string Name { get; set; }
+        [StringLength(40)]
+        public string id { get; set; }
 
-        [StringLength(50)]
-        public string Slug { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string name { get; set; }
 
-        [StringLength(50)]
-        public string Parent_category { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string slug { get; set; }
 
-        [StringLength(50)]
-        public string Sub_category { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string thumbnail { get; set; }
 
-        [StringLength(500)]
-        public string Description { get; set; }
+        [Required]
+        [StringLength(40)]
+        public string category { get; set; }
 
-        public int? Quantily { get; set; }
+        [StringLength(40)]
+        public string sub_category { get; set; }
 
-        public int? Price { get; set; }
+        public int quantity { get; set; }
 
-        public DateTime? ModifyAt { get; set; }
+        [Required]
+        [StringLength(150)]
+        public string description { get; set; }
 
-        public DateTime? CreateAt { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? createAt { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? modifyAt { get; set; }
+
+        public virtual Category Category1 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Favorite> Favorites { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<History_Buy> History_Buy { get; set; }
+
+        public virtual SubCategory SubCategory { get; set; }
     }
 }
