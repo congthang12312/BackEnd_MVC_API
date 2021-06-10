@@ -10,22 +10,18 @@ namespace API.Models
 {
     public class UserRepos : IUser
     {
-        public static SqlConnection connectDatabase()
-        {
-            string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
-            //khoi tao sql server
-            return new SqlConnection(connectionString);
-        }
+        public SqlConnection sqlCon = new DAO().connectDatabase();
+    
 
         public List<User> findAll()
         {
             var listUser = new List<User>();
-            SqlConnection sql = connectDatabase();
+        
             // sqlcommand cho phep thao tac voi csdl
-            SqlCommand sqlCommand = sql.CreateCommand();
+            SqlCommand sqlCommand = sqlCon.CreateCommand();
             //khai bao cau truy van 
             sqlCommand.CommandText = "SELECT TOP (1000) [id],[fullname],[email],[password],[googleID] ,[facebookID] ,[role],[createAt],[modifyAt] FROM[Project].[dbo].[User]";
-            sql.Open();
+            sqlCon.Open();
             // mo ket noi voi database
 
             // thuc thi query
@@ -70,32 +66,30 @@ namespace API.Models
             return listUser;
         }
 
-       
-
         public User findIdUser(String id)
         {
             User user = null;
-           // List<User> list = findAll();
-          //  foreach(User index in list)
-          //  {
-            //    if(index.C_id == id)
-         //       {
-              //      user = index;
-            //    }
-           // }
+            List<User> list = findAll();
+            foreach(User index in list)
+            {
+                if(index.id == id)
+                {
+                    user = index;
+                }
+            }
             return user;
 
         }
         public Boolean insertUser(User user)
         {
-            SqlConnection connection = connectDatabase();
+          
             string sql = "INSERT INTO [dbo].[User](id,Fullnname,Username,Password,Adress,Email,Phone,CreateDate)" +
                 " VALUES(@id,@Fullnname,@Username,@Password,@Adress,@Email,@Phone,@CreateDate) ";
             SqlCommand command = null;
             try
             {
-                connection.Open();
-                command = connection.CreateCommand();
+                sqlCon.Open();
+                command = sqlCon.CreateCommand();
                 command.CommandText = sql;
                 if(user != null){ 
                 command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
@@ -111,7 +105,8 @@ namespace API.Models
                 int r = command.ExecuteNonQuery();
                 //
                 return true;
-                }return false;
+                }
+                return false;
             }
             catch (Exception e)
             {
@@ -120,23 +115,23 @@ namespace API.Models
             }
             finally
             {
-                if (connection != null)
+                if (sqlCon != null)
                 {
-                    connection.Close();
+                    sqlCon.Close();
                 }
             }
         }
-        public Boolean deleteUser(int id)
+        public Boolean deleteUser(String  id)
         {
-            SqlConnection connection = connectDatabase();
-            string sql = "DELETE FROM [dbo].[User] WHERE id = @id ";
+           
+            string sql = "DELETE FROM [User] WHERE id = @id ";
             SqlCommand command = null;
             try
             {
-                connection.Open();
-                command = connection.CreateCommand();
+                sqlCon.Open();
+                command = sqlCon.CreateCommand();
                 command.CommandText = sql;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
                 int r = command.ExecuteNonQuery();
                 return true;
             }catch(Exception e)
@@ -145,62 +140,12 @@ namespace API.Models
             }
             finally
             {
-                if (connection != null)
+                if (sqlCon != null)
                 {
-                    connection.Close();
+                    sqlCon.Close();
                 }
             }
         }
-        /* public static long Insert(Student st)
-{
-    MySqlConnection connection = null;
-    MySqlCommand command = null;
-    MySqlDataReader reader = null;
-
-    long id = -1;
-
-    string sql = "insert into student (id, name, age, gender, address, dOB, email) " +
-        "values (@id, @name, @age, @gender, @address, @dOB, @email) ";
-
-    try
-    {
-        connection = DBUtils.getMySqlConnection();
-        connection.Open();
-        command = connection.CreateCommand();
-        command.CommandText = sql;
-        command.Parameters.Add("@id", MySqlDbType.Int32).Value = st.id;
-        command.Parameters.Add("@name", MySqlDbType.String).Value = st.name;
-        command.Parameters.Add("@age", MySqlDbType.String).Value = st.age;
-        command.Parameters.Add("@gender", MySqlDbType.String).Value = st.gender;
-        command.Parameters.Add("@address", MySqlDbType.String).Value = st.address;
-        command.Parameters.Add("@dOB", MySqlDbType.String).Value = st.dOB;
-        command.Parameters.Add("@email", MySqlDbType.String).Value = st.email;
-        int r = command.ExecuteNonQuery();
-
-        id = command.LastInsertedId;
-
-
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine("Error: " + e);
-    }
-
-    finally
-    {
-        if (connection != null)
-        {
-            connection.Close();
-        }
-
-        if (reader != null)
-        {
-            reader.Close();
-        }
-
-    }
-
-    return id;
-}*/
+     
     }
 }

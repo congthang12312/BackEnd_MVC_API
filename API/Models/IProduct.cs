@@ -11,5 +11,9 @@ namespace API.Models
         List<Product> listProduct();
 
         Product findProduct(string id);
+
+        Boolean addProduct(Product product);
+
+        Boolean deleteProduct(String id);
     }
 }

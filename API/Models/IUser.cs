@@ -14,6 +14,7 @@ namespace API.Models
 
         Boolean insertUser(User user);
 
-        Boolean deleteUser(int id);
+        Boolean deleteUser(String id);
+       
     }
 }

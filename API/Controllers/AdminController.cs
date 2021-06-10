@@ -40,7 +40,7 @@ namespace API.Controllers
 
         [HttpPost]
         [Route("delete-user/{id}")]
-        public Boolean Post([FromUri] int id)
+        public Boolean Post([FromUri] String id)
         {
             return userRepos.deleteUser(id);
         }
