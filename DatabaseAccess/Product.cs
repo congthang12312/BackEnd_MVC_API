@@ -39,7 +39,7 @@ namespace DatabaseAccess
         public string sub_category { get; set; }
 
         public int quantity { get; set; }
-
+        public double price { get; set; }
         [Required]
         [StringLength(150)]
         public string description { get; set; }

@@ -22,3 +22,15 @@ G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.cspr
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csprojAssemblyReference.cache
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
+D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb

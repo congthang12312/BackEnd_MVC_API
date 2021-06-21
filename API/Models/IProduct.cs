@@ -11,5 +11,8 @@ namespace API.Models
         List<Product> listProduct();
 
         Product findProduct(string id);
+       
+        //Cap nhat lai so luong sau khi nguoi dung mua hang
+        Boolean updateProduct(string id, int amount);
     }
 }
