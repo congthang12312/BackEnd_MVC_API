@@ -15,5 +15,8 @@ namespace API.Models
         Boolean addProduct(Product product);
 
         Boolean deleteProduct(String id);
+       
+        //Cap nhat lai so luong sau khi nguoi dung mua hang
+        Boolean updateProduct(string id, int amount);
     }
 }

@@ -41,6 +41,15 @@ namespace API.Controllers
             return productRepos.deleteProduct(id);
         }
       
+        //Cap nhat lai so luong sau khi nguoi dung mua hang
+        [Route("payment/{id}/{amount}")]
+        [HttpGet]
+        public Boolean payment(String id, int amount)
+
+        {
+           return prodRepos.updateProduct(id, amount);
+        }
+
 
     }
 }

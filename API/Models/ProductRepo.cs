@@ -20,7 +20,6 @@ namespace API.Models
 
             SqlCommand comd = sqlCon.CreateCommand();
             comd.CommandText = "select * from product";
-
             sqlCon.Open();
 
             SqlDataReader reader = comd.ExecuteReader();
@@ -58,6 +57,34 @@ namespace API.Models
                 }
             }
             return p;
+        }
+        //cap nhat so luong sau khi nguoi dung mua hang
+        public Boolean updateProduct(string id, int amount)
+        {
+            SqlConnection connection = connectDatabase();
+            string sql = "UPDATE [dbo].[PRODUCT] SET quantity=quantity-@amount  WHERE id = @id ";
+            SqlCommand command = null;
+            try
+            {
+                connection.Open();
+                command = connection.CreateCommand();
+                command.CommandText = sql;
+                command.Parameters.Add("@amount", SqlDbType.Int).Value = amount;
+                command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+                int r = command.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            finally
+            {
+                if (connection != null)
+                {
+                    connection.Close();
+                }
+            }
         }
 
         public Boolean addProduct(Product product)
