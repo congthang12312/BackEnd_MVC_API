@@ -13,6 +13,9 @@ namespace API
         {
             // Web API configuration and services
 
+            // MIDLEWARE AUTHENTICATION
+            config.Filters.Add(new AuthorizeAttribute());
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 

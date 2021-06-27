@@ -44,6 +44,11 @@ namespace DatabaseAccess
         [Column(TypeName = "date")]
         public DateTime? modifyAt { get; set; }
 
+        public string hashPassword(string password)
+        {
+            return this.password = password + "00000000";
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Favorite> Favorites { get; set; }
 

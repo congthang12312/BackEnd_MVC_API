@@ -12,6 +12,8 @@ namespace API.Models
         List<User> findAll();
         User findIdUser(String id);
 
+        User findUserByEmail(String email);
+
         Boolean insertUser(User user);
 
         Boolean deleteUser(int id);

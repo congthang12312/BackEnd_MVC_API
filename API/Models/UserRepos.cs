@@ -86,6 +86,21 @@ namespace API.Models
             return user;
 
         }
+
+        public User findUserByEmail(String email)
+        {
+            User user = null;
+            List<User> list = findAll();
+            foreach(User userItem in list)
+            {
+                if (String.Equals(email, userItem.email) == true) {
+                    return userItem;
+                }
+            }
+            return null;
+
+        }
+
         public Boolean insertUser(User user)
         {
             SqlConnection connection = connectDatabase();
@@ -97,20 +112,40 @@ namespace API.Models
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
-                if(user != null){ 
-                command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
-                command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
-                command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
-                command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
-                command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
-                command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
-                command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
-                command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
-                // thuc thi cau lenh cho (them xoa sua)
-                int r = command.ExecuteNonQuery();
-                //
-                return true;
+                Debug.WriteLine("hihi");
+                if(user != null){
+                    Debug.WriteLine("hihi 2 " + user.id);
+                    Debug.WriteLine("fullname 2 " + user.fullname);
+                    Debug.WriteLine("email 2 " + user.email);
+                    Debug.WriteLine("password 2 " + user.password);
+                    Debug.WriteLine("googleID 2 " + user.googleID);
+                    Debug.WriteLine("facebookID 2 " + user.facebookID);
+                    Debug.WriteLine("role 2 " + user.role);
+                    Debug.WriteLine("createAt 2 " + user.createAt);
+                    Debug.WriteLine("modifyAt 2 " + user.modifyAt);
+                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
+                    Debug.WriteLine("oke ==== 1 ");
+                    command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
+                    Debug.WriteLine("oke ==== 2 ");
+                    command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
+                    Debug.WriteLine("oke ==== 3 ");
+                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
+                    Debug.WriteLine("oke ==== 4 ");
+                    command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
+                    Debug.WriteLine("oke ==== 5 ");
+                    command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
+                    Debug.WriteLine("oke ==== 6 ");
+                    command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
+                    Debug.WriteLine("oke ==== 7 ");
+                    command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
+                    Debug.WriteLine("oke ==== 8 ");
+                    command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
+                    Debug.WriteLine("oke ==== 9 ");
+                    // thuc thi cau lenh cho (them xoa sua)
+                    int r = command.ExecuteNonQuery();
+                    Debug.WriteLine("oke ==== 10");
+                    //
+                    return true;
                 }return false;
             }
             catch (Exception e)
