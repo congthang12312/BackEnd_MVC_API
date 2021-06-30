@@ -31,7 +31,7 @@ namespace DatabaseAccess
         [StringLength(40)]
         public string thumbnail { get; set; }
 
-        public int price { get; set; }
+       
         [Required]
         [StringLength(40)]
         public string category { get; set; }

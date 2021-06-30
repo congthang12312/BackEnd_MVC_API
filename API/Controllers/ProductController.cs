@@ -47,7 +47,7 @@ namespace API.Controllers
         public Boolean payment(String id, int amount)
 
         {
-           return prodRepos.updateProduct(id, amount);
+           return productRepos.updateProduct(id, amount);
         }
 
 

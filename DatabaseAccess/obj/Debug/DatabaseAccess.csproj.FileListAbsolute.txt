@@ -34,3 +34,15 @@ D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csp
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csprojAssemblyReference.cache
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll.config
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.dll
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\DatabaseAccess.pdb
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete

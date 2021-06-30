@@ -17,10 +17,10 @@ namespace API.Models
         {
 
             List<Product> proList = new List<Product>();
-
+            sqlCon.Open();
             SqlCommand comd = sqlCon.CreateCommand();
             comd.CommandText = "select * from product";
-            sqlCon.Open();
+          
 
             SqlDataReader reader = comd.ExecuteReader();
             while (reader.Read())
@@ -61,7 +61,7 @@ namespace API.Models
         //cap nhat so luong sau khi nguoi dung mua hang
         public Boolean updateProduct(string id, int amount)
         {
-            SqlConnection connection = connectDatabase();
+            SqlConnection connection = new DAO().connectDatabase();
             string sql = "UPDATE [dbo].[PRODUCT] SET quantity=quantity-@amount  WHERE id = @id ";
             SqlCommand command = null;
             try
