@@ -10,7 +10,7 @@ namespace API.Models
     {
         public  SqlConnection connectDatabase()
         {
-            string connectionString = "Data Source=ADMIN-PC;Initial Catalog=Project;Integrated Security=True";
+            string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
             //khoi tao sql server
             return new SqlConnection(connectionString);
         }
