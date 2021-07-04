@@ -14,6 +14,8 @@ namespace API.Models
 
         Boolean insertUser(User user);
 
+        User findUserByEmail(String email);
+
         Boolean deleteUser(String id);
        
     }

@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using DatabaseAccess;
 namespace API.Models
@@ -11,22 +12,24 @@ namespace API.Models
     public class UserRepos : IUser
     {
         public SqlConnection sqlCon = new DAO().connectDatabase();
-    
 
-        public List<User> findAll()
+        public List<User>  findAll()
         {
             var listUser = new List<User>();
-        
+
+            
             // sqlcommand cho phep thao tac voi csdl
             SqlCommand sqlCommand = sqlCon.CreateCommand();
+            Debug.WriteLine("==== 1");
             //khai bao cau truy van 
             sqlCommand.CommandText = "SELECT TOP (1000) [id],[fullname],[email],[password],[googleID] ,[facebookID] ,[role],[createAt],[modifyAt] FROM[Project].[dbo].[User]";
             sqlCon.Open();
+           // sqlCon.OpenAsync();
             // mo ket noi voi database
-
+            Debug.WriteLine("==== 1 - 2");
             // thuc thi query
             SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
-
+            Debug.WriteLine("==== 2");
             try
             {
                 while (sqlDataReader.Read())
@@ -61,6 +64,9 @@ namespace API.Models
                 return listUser;
                 //  Block of code to handle errors
             }
+
+            Debug.WriteLine("list user ");
+            Debug.WriteLine(listUser);
             // xu ly cai du lieu tra ve 
            
             return listUser;
@@ -80,6 +86,22 @@ namespace API.Models
             return user;
 
         }
+
+        public User findUserByEmail(String email)
+        {
+            User user = null;
+            List<User> list = findAll();
+            foreach (User userItem in list)
+            {
+                if (String.Equals(email, userItem.email) == true)
+                {
+                    return userItem;
+                }
+            }
+            return null;
+
+        }
+
         public Boolean insertUser(User user)
         {
           

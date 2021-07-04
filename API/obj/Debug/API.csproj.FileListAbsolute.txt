@@ -268,3 +268,11 @@ C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\API\bin\System.Web.Http.xml
 C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\API\bin\System.Web.Http.WebHost.xml
 C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Admin\Desktop\backend\BackEnd_MVC_API\API\obj\Debug\API.csproj.CopyComplete
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Logging.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Tokens.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Logging.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Tokens.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.IdentityModel.Tokens.Jwt.xml

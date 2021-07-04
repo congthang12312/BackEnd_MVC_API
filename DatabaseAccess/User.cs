@@ -27,6 +27,11 @@ namespace DatabaseAccess
         [StringLength(40)]
         public string email { get; set; }
 
+        public string hashPassword(string password)
+        {
+            return this.password = password + "00000000";
+        }
+
         [StringLength(40)]
         public string password { get; set; }
 

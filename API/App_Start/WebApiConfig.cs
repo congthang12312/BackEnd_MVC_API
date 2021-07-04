@@ -12,7 +12,9 @@ namespace API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-
+            
+            // ADD MIDLEWARE AUTHENTICATION
+            config.Filters.Add(new AuthorizeAttribute());
             // Web API routes
             config.MapHttpAttributeRoutes();
 
