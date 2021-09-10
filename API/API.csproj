@@ -99,10 +99,14 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CategoryRepo.cs" />
+    <Compile Include="Models\DAO.cs" />
+    <Compile Include="Models\ICategory.cs" />
     <Compile Include="Models\IProduct.cs" />
     <Compile Include="Models\IUser.cs" />
     <Compile Include="Models\ProductRepo.cs" />

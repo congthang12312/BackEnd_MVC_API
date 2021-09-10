@@ -11,7 +11,7 @@ namespace API.Controllers
     public class ProductController : ApiController
     {
         // GET: ProductMacbook Pro 2021
-        IProduct prodRepos = new ProductRepo();
+        IProduct prodRepos = new ProductRepos();
         [Route("listProduct")]
         [HttpGet]
         public List<Product> GetListPro()
@@ -37,5 +37,13 @@ namespace API.Controllers
         }
 
 
+        //phan trang: 9sp 1 trang
+        [Route("pages/{page}")]
+        [HttpGet]
+        public List<Product> GetListProInPage(int page)
+        {
+            return prodRepos.listProductInPage(page, 9);
+
+        }
     }
 }

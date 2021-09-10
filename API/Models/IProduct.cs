@@ -14,5 +14,8 @@ namespace API.Models
        
         //Cap nhat lai so luong sau khi nguoi dung mua hang
         Boolean updateProduct(string id, int amount);
+
+        List<Product> listProductInPage(int page, int productAmount);
+       
     }
 }
