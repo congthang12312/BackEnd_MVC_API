@@ -214,3 +214,22 @@ D:\Style\BackEnd_MVC_API\API\obj\Debug\API.csproj.CoreCompileInputs.cache
 D:\Style\BackEnd_MVC_API\API\obj\Debug\API.csproj.CopyComplete
 D:\Style\BackEnd_MVC_API\API\obj\Debug\API.dll
 D:\Style\BackEnd_MVC_API\API\obj\Debug\API.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Antlr3.Runtime.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.Web.Infrastructure.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\SlugGenerator.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Helpers.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Mvc.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Optimization.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Razor.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\WebGrease.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Antlr3.Runtime.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Helpers.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Mvc.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Optimization.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Razor.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.xml

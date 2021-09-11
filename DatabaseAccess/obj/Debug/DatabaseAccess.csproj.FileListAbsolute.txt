@@ -34,3 +34,24 @@ D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csp
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.csproj.CopyComplete
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.dll
 D:\ProjectNetBackend\BackEnd_MVC_API\DatabaseAccess\obj\Debug\DatabaseAccess.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\Antlr3.Runtime.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\Newtonsoft.Json.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\SlugGenerator.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Helpers.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Mvc.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Optimization.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Razor.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.Deployment.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.Razor.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\WebGrease.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\Antlr3.Runtime.pdb
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\Newtonsoft.Json.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Helpers.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Mvc.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Optimization.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.Razor.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.Deployment.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\DatabaseAccess\bin\Debug\System.Web.WebPages.Razor.xml

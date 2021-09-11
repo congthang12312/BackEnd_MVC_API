@@ -12,5 +12,8 @@ namespace API.Models
         List<DatabaseAccess.Category> listCategory();
         List<Product> findCategory(string category);
 
+        // code cua Thang
+        List<Category> ListCategory();
+
     }
 }

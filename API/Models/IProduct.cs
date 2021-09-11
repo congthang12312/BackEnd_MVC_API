@@ -16,6 +16,14 @@ namespace API.Models
         Boolean updateProduct(string id, int amount);
 
         List<Product> listProductInPage(int page, int productAmount);
-       
+
+        List<Product> listProductByPage(int page);
+
+        Boolean updateProduct(Product product);
+
+        Boolean deleteProduct(String id);
+
+        Boolean addProduct(Product product);
+
     }
 }

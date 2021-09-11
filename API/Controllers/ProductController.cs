@@ -26,7 +26,52 @@ namespace API.Controllers
         {
             return prodRepos.findProduct(id);
         }
-      
+
+        [Route("numpageProduct")]
+        [HttpGet]
+        public int GetNumPageProduct()
+        {
+            List<Product> list = new List<Product>();
+            list = prodRepos.listProduct();
+            int quantityProductInOnePage = 3;
+            int totalUser = list.Count;
+            int numPageUser = totalUser / quantityProductInOnePage;
+            if (totalUser % quantityProductInOnePage != 0)
+            {
+                numPageUser++;
+            }
+            return numPageUser;
+        }
+
+        // lay product theo page
+        [Route("listProductPage/{page}")]
+        [HttpGet]
+        public List<Product> GetProduct(int page)
+        {
+            return prodRepos.listProductByPage(page);
+        }
+        // them 1 product
+        [Route("add-product")]
+        [HttpPost]
+        public Boolean AddProduct([FromBody] Product product)
+        {
+            return prodRepos.addProduct(product);
+        }
+
+        [HttpPost]
+        [Route("delete-product/{id}")]
+        public Boolean Post([FromUri] String id)
+        {
+            return prodRepos.deleteProduct(id);
+        }
+
+        [Route("update-product")]
+        [HttpPost]
+        public Boolean updateProduct([FromBody] Product product)
+        {
+            return prodRepos.updateProduct(product);
+        }
+
         //Cap nhat lai so luong sau khi nguoi dung mua hang
         [Route("payment/{id}/{amount}")]
         [HttpGet]
