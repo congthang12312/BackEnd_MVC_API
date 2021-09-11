@@ -15,5 +15,8 @@ namespace API.Models
         Boolean addProduct(Product product);
 
         Boolean deleteProduct(String id);
+        List<Product> listProductByPage(int page);
+
+        Boolean updateProduct(Product product);
     }
 }

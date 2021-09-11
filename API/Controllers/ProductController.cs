@@ -26,7 +26,32 @@ namespace API.Controllers
         {
             return productRepos.findProduct(id);
         }
+
+        [Route("numpageProduct")]
+        [HttpGet]
+        public int GetNumPageProduct()
+        {
+            List<Product> list = new List<Product>();
+            list = productRepos.listProduct();
+            int quantityProductInOnePage = 3;
+            int totalUser = list.Count;
+            int numPageUser = totalUser / quantityProductInOnePage;
+            if (totalUser % quantityProductInOnePage != 0)
+            {
+                numPageUser++;
+            }
+            return numPageUser;
+        }
+
+        // lay product theo page
+        [Route("listProductPage/{page}")]
+        [HttpGet]
+        public List<Product> GetProduct(int page)
+        {
+            return productRepos.listProductByPage(page);
+        }
         // them 1 product
+
         [Route("add-product")]
         [HttpPost]
         public Boolean AddProduct([FromBody] Product product)
@@ -40,7 +65,13 @@ namespace API.Controllers
         {
             return productRepos.deleteProduct(id);
         }
-      
+
+        [Route("update-product")]
+        [HttpPost]
+        public Boolean updateProduct([FromBody] Product product)
+        {
+            return productRepos.updateProduct(product);
+        }
 
     }
 }

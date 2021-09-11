@@ -10,9 +10,10 @@ using System.Web.Http.Cors;
 
 namespace API.Controllers
 {
-    [EnableCorsAttribute("*", "*", "*")]
+    [EnableCorsAttribute("*", "*", "*")]    
     public class AdminController : ApiController
     {
+     
         // GET: api/Admin
         IUser userRepos = new UserRepos();
         [HttpGet]
@@ -35,6 +36,7 @@ namespace API.Controllers
         [Route("insert-user")]
         public Boolean Post([FromBody]User user)
         {
+       
             return userRepos.insertUser(user);
         }
 
