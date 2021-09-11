@@ -16,6 +16,11 @@ namespace DatabaseAccess
             History_Buy = new HashSet<History_Buy>();
         }
 
+        public string hashPassword(string password)
+        {
+            return this.password = password + "00000000";
+        }
+
         [StringLength(40)]
         public string id { get; set; }
 

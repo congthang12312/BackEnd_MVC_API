@@ -151,6 +151,21 @@ namespace API.Models
                 }
             }
         }
+
+        public User findUserByEmail(String email)
+        {
+            User user = null;
+            List<User> list = findAll();
+            foreach (User userItem in list)
+            {
+                if (String.Equals(email, userItem.email) == true)
+                {
+                    return userItem;
+                }
+            }
+            return null;
+
+        }
         /* public static long Insert(Student st)
 {
     MySqlConnection connection = null;

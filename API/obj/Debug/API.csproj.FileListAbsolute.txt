@@ -233,3 +233,11 @@ G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.Razor.xml
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.xml
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Deployment.xml
 G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.Web.WebPages.Razor.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Logging.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Tokens.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.IdentityModel.Tokens.Jwt.dll
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.JsonWebTokens.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Logging.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\Microsoft.IdentityModel.Tokens.xml
+G:\ADMIN\NET MVC\BE\BackEnd_MVC_API\API\bin\System.IdentityModel.Tokens.Jwt.xml
