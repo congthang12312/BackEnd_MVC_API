@@ -97,20 +97,32 @@ namespace API.Models
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
-                if(user != null){ 
-                command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
-                command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
-                command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
-                command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
-                command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
-                command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
-                command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
-                command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
-                // thuc thi cau lenh cho (them xoa sua)
-                int r = command.ExecuteNonQuery();
-                //
-                return true;
+                Debug.WriteLine("xin chaoo");
+                if(user != null){
+                    
+                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
+                    
+                    command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
+                    
+                    command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
+                    
+                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
+                    
+                    command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = DBNull.Value;
+                    
+                    command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = DBNull.Value;
+                    
+                    command.Parameters.Add("@role", SqlDbType.Int).Value = 1;
+                    
+                    command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    
+                    command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    
+                    // thuc thi cau lenh cho (them xoa sua)
+                    int r = command.ExecuteNonQuery();
+                    
+                    //
+                    return true;
                 }return false;
             }
             catch (Exception e)
