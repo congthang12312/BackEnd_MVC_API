@@ -47,6 +47,7 @@
   <ItemGroup>
     <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -153,6 +154,7 @@
     <Compile Include="Helper\CustomAuthentication.cs" />
     <Compile Include="Helper\TokenManager.cs" />
     <Compile Include="Models\CategoryRepo.cs" />
+    <Compile Include="Models\HistoryBuy.cs" />
     <Compile Include="Models\DAO.cs" />
     <Compile Include="Models\DataRespon.cs" />
     <Compile Include="Models\ICategory.cs" />

@@ -167,7 +167,7 @@ namespace API.Models
             sqlCon.Open();
             SqlCommand comd = sqlCon.CreateCommand();
             comd.CommandText = " select ok.id,ok.name,ok.slug,ok.thumbnail,ok.price,ok.category,ok.sub_category,ok.quantity,ok.description,ok.createAt,ok.modifyAt  from (select ROW_NUMBER() over (order by id) as row, * from  Product ) as ok " +
-                               " where ok.row between(@page-1)*3+1 and (@page-1)*3+3";
+                               " where ok.row between(@page-1)*10+1 and (@page-1)*10+10";
             comd.Parameters.Add("@page", SqlDbType.Int).Value = page;
             SqlDataReader reader = comd.ExecuteReader();
             while (reader.Read())
@@ -210,11 +210,11 @@ namespace API.Models
                     comd.Parameters.Add("@name", SqlDbType.NVarChar).Value = product.name;
                     comd.Parameters.Add("@slug", SqlDbType.NVarChar).Value = product.slug;
                     comd.Parameters.Add("@thumbnail", SqlDbType.VarChar).Value = product.thumbnail;
-                    comd.Parameters.Add("@price", SqlDbType.Int).Value = product.price;
+                    comd.Parameters.Add("@price", SqlDbType.Float).Value = Convert.ToDouble(product.price);
                     comd.Parameters.Add("@category", SqlDbType.VarChar).Value = product.category;
                     comd.Parameters.Add("@sub_category", SqlDbType.VarChar).Value = product.sub_category;
                     comd.Parameters.Add("@quantity", SqlDbType.Int).Value = product.quantity;
-                    comd.Parameters.Add("@description", SqlDbType.VarChar).Value = product.description;
+                    comd.Parameters.Add("@description", SqlDbType.NVarChar).Value = product.description;
                     comd.Parameters.Add("@createAt", SqlDbType.DateTime).Value = product.createAt;
                     comd.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = DateTime.Now;
                     int r = comd.ExecuteNonQuery();
@@ -289,11 +289,11 @@ namespace API.Models
                     command.Parameters.Add("@name", SqlDbType.NVarChar).Value = product.name;
                     command.Parameters.Add("@slug", SqlDbType.NVarChar).Value = product.slug;
                     command.Parameters.Add("@thumbnail", SqlDbType.VarChar).Value = product.thumbnail;
-                    command.Parameters.Add("@price", SqlDbType.Int).Value = product.price;
+                    command.Parameters.Add("@price", SqlDbType.Float).Value = Convert.ToDouble(product.price);
                     command.Parameters.Add("@category", SqlDbType.VarChar).Value = product.category;
                     command.Parameters.Add("@sub_category", SqlDbType.VarChar).Value = product.sub_category;
                     command.Parameters.Add("@quantity", SqlDbType.Int).Value = product.quantity;
-                    command.Parameters.Add("@description", SqlDbType.VarChar).Value = product.description;
+                    command.Parameters.Add("@description", SqlDbType.NVarChar).Value = product.description;
                     command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = DateTime.Now;
                     command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = DateTime.Now;
                     int r = command.ExecuteNonQuery();

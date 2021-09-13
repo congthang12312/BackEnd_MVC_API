@@ -17,5 +17,7 @@ namespace API.Models
         Boolean deleteUser(int id);
 
         User findUserByEmail(String email);
+
+        List<HistoryBuy> getHistoryBuy();
     }
 }

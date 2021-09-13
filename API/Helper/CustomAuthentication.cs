@@ -30,7 +30,6 @@ namespace API.Helper
         {
             this.role = role;
         }
-
         public async Task AuthenticateAsync(HttpAuthenticationContext context, CancellationToken cancellationToken)
         {
             string authParameter = string.Empty;

@@ -49,6 +49,13 @@ namespace API.Controllers
             return userRepos.deleteUser(id);
         }
 
+        [HttpGet]
+        [Route("get-history")]
+        public List<HistoryBuy> getHistory()
+        {
+            return userRepos.getHistoryBuy();
+        }
+
         [AllowAnonymous]
         [HttpPost]
         [Route("login")]

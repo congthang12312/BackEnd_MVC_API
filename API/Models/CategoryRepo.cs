@@ -1,4 +1,5 @@
 ﻿using DatabaseAccess;
+using SlugGenerator;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -64,6 +65,54 @@ namespace API.Models
             }
 
 
+
+        }
+
+        public bool insertCategory(string categoryName)
+        {
+            Category category = new Category();
+            Guid myuuid = Guid.NewGuid();
+            category.id = myuuid.ToString();
+            category.name = categoryName;
+            category.slug = categoryName.GenerateSlug();
+            string sql = "INSERT INTO Category (id,name,slug,createAt ,modifyAt)" +
+                "VALUES(@id,@name,@slug,@createAt,@modifyAt)";
+            SqlCommand command = null;
+            try
+            {
+                sqlCon.Open();
+                command = sqlCon.CreateCommand();
+                command.CommandText = sql;
+
+                if (categoryName != "")
+                {
+                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = category.id;
+                    command.Parameters.Add("@name", SqlDbType.NVarChar).Value = category.name;
+                    command.Parameters.Add("@slug", SqlDbType.VarChar).Value = category.slug;
+                    command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    int r = command.ExecuteNonQuery();
+                    if(r != -1)
+                        return true;
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+                return false;
+            }
+            finally
+            {
+                if (sqlCon != null)
+                {
+                    sqlCon.Close();
+                }
+            }
 
         }
 

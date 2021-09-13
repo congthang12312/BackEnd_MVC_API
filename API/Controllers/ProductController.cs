@@ -33,7 +33,7 @@ namespace API.Controllers
         {
             List<Product> list = new List<Product>();
             list = prodRepos.listProduct();
-            int quantityProductInOnePage = 3;
+            int quantityProductInOnePage = 10;
             int totalUser = list.Count;
             int numPageUser = totalUser / quantityProductInOnePage;
             if (totalUser % quantityProductInOnePage != 0)

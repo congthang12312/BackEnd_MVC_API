@@ -30,6 +30,14 @@ namespace API.Controllers
             return category.findCategory(categoryName);
         }
 
-       
+        [Route("create-category")]
+        [HttpPost]
+        public Boolean InsertCategory([FromBody] string categoryName)
+        {
+            return category.insertCategory(categoryName);
+        }
+
+
+
     }
 }

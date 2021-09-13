@@ -1,3 +1,4 @@
+drop database Project
 CREATE DATABASE Project
 GO
 USE Project
@@ -53,6 +54,7 @@ CREATE TABLE [dbo].[Product](
   ADD price FLOAT;
  --Chinh sua đo daai trường thumbnail
  Alter table [dbo].[Product] ALTER Column thumbnail nvarchar(250) not NULL
+ Alter table [dbo].[Product] ALTER Column description nvarchar(250) not NULL
  
 SELECT * FROM PRODUCT
 
@@ -147,7 +149,9 @@ INSERT INTO [Product] VALUES('b83eeff4-925f-4211-84d3-5e3936b6f3f8','Lenovoyoga-
  GO
 INSERT INTO [Product] VALUES('b83eeff4-925f-4211-84d3-5e3936b6f3f10','Lenovo-Yoga-Duet-7-13iml05-I7','lenovo-yoga-duet-7-13iml05-i7','Style/default/img/images/lenovo-yoga-duet-7-13iml05-i7.jpg','6307bf03-c946-4009-948f-ce53188ccfb8',null, 100, N'Laptop Lenovo sở hữu kiểu dáng đơn giản, hiện đại, vẻ ngoài thanh lịch, mang đến cho người dùng sự sang trọng đầy tinh tế, có độ mỏng nhẹ nên dễ mang đi mọi nơi.', default, default,21340000 )
 
-
+select * from product
+ select row, ok.id,ok.name,ok.slug,ok.thumbnail,ok.price,ok.category,ok.sub_category,ok.quantity,ok.description,ok.createAt,ok.modifyAt  from (select ROW_NUMBER() over (order by id) as row, * from  Product ) as ok 
+                                where ok.row between(4-1)*10+1 and (4-1)*10+10
 /* SELECT * FROM [Product]; */
 /* ======================================== */
 
@@ -185,7 +189,7 @@ CREATE TABLE [dbo].[History_Buy](
 	modifyAt date DEFAULT GETDATE()
 )	
 GO
-INSERT INTO [History_Buy] VALUES('badbe376-f279-4a5c-84b1-d35e864c2e82','193eeff4-925f-4211-84d3-5e3936b6f3f3', 5 ,N'KTX Khu B, Đại Học Quốc Gia', default, default)
+INSERT INTO [History_Buy] VALUES('badbe376-f279-4a5c-84b1-d35e864c2e82','b83eeff4-925f-4211-84d3-5e3936b6f3f1', 5 ,N'KTX Khu B, Đại Học Quốc Gia', default, default)
 /* SELECT * FROM [History_Buy]; */
 /* ======================================== */
 
@@ -200,5 +204,4 @@ INSERT INTO [Favorite] VALUES('badbe376-f279-4a5c-84b1-d35e864c2e82','a63130fe-9
 /* SELECT * FROM [Favorite]; */
 /* ======================================== */
 
-
-
+ 

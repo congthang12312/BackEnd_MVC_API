@@ -12,7 +12,8 @@ namespace API.Models
     {
         public static SqlConnection connectDatabase()
         {
-            string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
+          //  string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
+            string connectionString = "Data Source = LAPTOP-7OO41Q78\\DCT; Initial Catalog = Project; Integrated Security = True";
             //khoi tao sql server
             return new SqlConnection(connectionString);
         }
@@ -166,7 +167,7 @@ namespace API.Models
             return null;
 
         }
-        /* public static long Insert(Student st)
+/* public static long Insert(Student st)
 {
     MySqlConnection connection = null;
     MySqlCommand command = null;
@@ -217,5 +218,34 @@ namespace API.Models
 
     return id;
 }*/
+        
+        public List<HistoryBuy> getHistoryBuy()
+        {
+            List<HistoryBuy> listHistory = new List<HistoryBuy>();
+            SqlConnection sql = connectDatabase();
+            // sqlcommand cho phep thao tac voi csdl
+            SqlCommand sqlCommand = sql.CreateCommand();
+            //khai bao cau truy van 
+            sqlCommand.CommandText = "SELECT  ROW_NUMBER() OVER (ORDER BY u.fullname), u.id, u.fullname,u.email, h.address, h.idProduct, p.name, p.price, h.quantity,h.createAt, (h.quantity * p.price) as N'Thành tiền' FROM [History_Buy] h join [dbo].[User] u  on h.idUser = u.id  join [Product] p on h.idProduct = p.id";
+            sql.Open();
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                HistoryBuy history = new HistoryBuy();
+                history.stt =  sqlDataReader.GetInt64(0);
+                history.id = sqlDataReader.GetString(1);
+                history.fullName = sqlDataReader.GetString(2);
+                history.email = sqlDataReader.GetString(3);
+                history.address = sqlDataReader.GetString(4);
+                history.idProduct = sqlDataReader.GetString(5);
+                history.nameProduct = sqlDataReader.GetString(6);
+                history.price = sqlDataReader.GetDouble(7);
+                history.quantity = sqlDataReader.GetInt32(8);
+                history.createAt = sqlDataReader.GetDateTime(9);
+                history.total = sqlDataReader.GetDouble(10);
+                listHistory.Add(history); 
+            }
+            return listHistory;
+        }
     }
 }
