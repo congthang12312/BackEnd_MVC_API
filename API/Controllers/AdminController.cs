@@ -61,33 +61,57 @@ namespace API.Controllers
         [Route("login")]
         public DataRespon<Login> Login(Login login)
         {
-            User userToken = new User();
             DataRespon<Login> respon = new DataRespon<Login>();
-            Debug.WriteLine("email " + login.email);
-            Debug.WriteLine("pass " + login.password);
+            try
+            {
+                User isExist = userRepos.findUserByEmail(login.email);
+                if (isExist != null)
+                {
+                    bool isMatchPassword = String.Equals(login.password, isExist.password);
 
-            Guid myuuid = Guid.NewGuid();
-            string generate_id = myuuid.ToString();
+                    if (isMatchPassword == true)
+                    {
 
-            userToken.id = generate_id;
-            userToken.role = 0;
-            userToken.fullname = "nguyen van a";
-            userToken.email = "email@mgail.com";
-            userToken.password = userToken.hashPassword("passHash");
-            userToken.googleID = "null";
-            userToken.facebookID = "null";
-            DateTime localDate = DateTime.Now;
-            userToken.createAt = localDate;
-            userToken.modifyAt = localDate;
+                        User userToken = new User();
+                        DataRespon<string> responToken = new DataRespon<string>();
 
-            String token = TokenManager.generateToken(userToken);
-            // var webRequest = System.Net.WebRequest.Create("https://localhost:44308");
-            // webRequest.Headers.Add("Authorization", "Bearer " + token);
+                        userToken.id = isExist.id;
+                        userToken.role = isExist.role;
+                        userToken.fullname = isExist.fullname;
+                        userToken.email = isExist.email;
 
-            respon.message = "Thành công";
-            respon.error = false;
-            respon.data = new Login() { email = login.email, password = login.password, token = token };
-            return respon;
+                        String token = TokenManager.generateToken(userToken);
+                        Login userLoginRespon = new Login();
+                        userLoginRespon.token = token;
+
+                        respon.message = "Đăng nhập thành công";
+                        respon.error = false;
+                        respon.data = userLoginRespon;
+                        return respon;
+
+                    }
+                    else
+                    {
+
+                        respon.error = true;
+                        respon.message = "notMatchPassword";
+                        return respon;
+                    }
+                }
+                else
+                {
+                    respon.error = true;
+                    respon.message = "userNotExist";
+                    return respon;
+                }
+
+            }
+            catch
+            {
+                respon.error = true;
+                respon.message = "errorLogin";
+                return respon;
+            }
         }
 
         //[WebApiJWT]
@@ -97,70 +121,41 @@ namespace API.Controllers
         public DataRespon<String> registerLocal([FromBody] RegisterLocal useRegister)
         {
             DataRespon<String> respon = new DataRespon<String>();
-
             try
             {
                 User isExist = userRepos.findUserByEmail(useRegister.email);
+
                 if (isExist == null)
                 {
                     Guid myuuid = Guid.NewGuid();
                     string generate_id = myuuid.ToString();
-
-                    User userToken = new User();
-                    userToken.id = generate_id;
-                    userToken.role = 1;
-                    userToken.fullname = useRegister.fullname;
-                    userToken.email = useRegister.email;
-                    userToken.password = userToken.hashPassword(useRegister.password);
-                    userToken.googleID = "null";
-                    userToken.facebookID = "null";
-                    DateTime localDate = DateTime.Now;
-                    userToken.createAt = localDate;
-                    userToken.modifyAt = localDate;
-
-                    Boolean rs = false;
-                    try
+                    User infoUser = new User();
+                    infoUser.id = generate_id;
+                    infoUser.role = 1;
+                    infoUser.fullname = useRegister.fullname;
+                    infoUser.email = useRegister.email;
+                    infoUser.password = useRegister.password;
+                    bool isCreateSuccess = userRepos.insertUser(infoUser);
+                    if (isCreateSuccess == true)
                     {
-                        rs = userRepos.insertUser(userToken);
-                        Debug.WriteLine("ket qua : " + rs);
-                    }
-                    catch (Exception ex)
-                    {
-                        Debug.WriteLine(ex);
-                    }
-                    if (rs == true)
-                    {
-                        // GENERATE TOKEN
-                        String token = TokenManager.generateToken(userToken);
-
-                        // VALIDATE TOKEN
-                        // User de_token = TokenManager.ValidateToken(token);
-                        // SET CLAIMS REQUEST
-                        // ClaimsPrincipal hehe = TokenManager.GetPrincipal(token);
-                        // LOG PROPERTY
-                        //Debug.WriteLine("Gi day ta == " + hehe.FindFirst("ROLE").Value);
-
-
-
-                        var webRequest = System.Net.WebRequest.Create("https://localhost:44308");
-                        webRequest.Headers.Add("Authorization", "Bearer " + token);
-                        respon.message = "Tạo tài khoản thành công";
+                        infoUser.password = null;
+                        String token = TokenManager.generateToken(infoUser);
+                        respon.message = "Tạo tài khoản thành công!";
                         respon.error = false;
                         respon.data = token;
                         return respon;
                     }
                     else
                     {
-                        respon.message = "Không thể tạo tài khoản!";
+                        respon.message = "Tạo tài khoản thất bại!";
                         respon.error = true;
                         respon.data = null;
                         return respon;
                     }
-
                 }
                 else
                 {
-                    respon.message = "Email đã tồn tại!";
+                    respon.message = "emailExist";
                     respon.error = true;
                     respon.data = null;
                     return respon;
