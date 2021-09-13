@@ -127,7 +127,7 @@ namespace API.Models
                 }
             }
         }
-        public Boolean deleteUser(int id)
+        public Boolean deleteUser(string id)
         {
             SqlConnection connection = connectDatabase();
             string sql = "DELETE FROM [dbo].[User] WHERE id = @id ";
@@ -137,7 +137,7 @@ namespace API.Models
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
-                command.Parameters.Add("@id", SqlDbType.Int).Value = id;
+                command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
                 int r = command.ExecuteNonQuery();
                 return true;
             }catch(Exception e)

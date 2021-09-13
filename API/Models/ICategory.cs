@@ -15,5 +15,6 @@ namespace API.Models
         // code cua Thang
         List<Category> ListCategory();
         bool insertCategory(string categoryName);
+        bool deleteCategory(string id);
     }
 }

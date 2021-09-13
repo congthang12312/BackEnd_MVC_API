@@ -37,6 +37,13 @@ namespace API.Controllers
             return category.insertCategory(categoryName);
         }
 
+        [Route("delete-category/{id}")]
+        [HttpPost]
+        public Boolean DeleteCategory( string id)
+        {
+            return category.deleteCategory(id);
+        }
+
 
 
     }

@@ -13,6 +13,34 @@ namespace API.Models
     public class CategoryRepo : ICategory
     {
         public SqlConnection sqlCon = new DAO().connectDatabase();
+
+        public bool deleteCategory(string id)
+        {
+            string sql = "delete Category where id = @id";
+            SqlCommand command = null;
+            try
+            {
+                sqlCon.Open();
+                command = sqlCon.CreateCommand();
+                command.CommandText = sql;
+                command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+                int r = command.ExecuteNonQuery();
+                if(r != -1)  return true;
+                return false;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+            finally
+            {
+                if (sqlCon != null)
+                {
+                    sqlCon.Close();
+                }
+            }
+        }
+
         public List<Product> findCategory(string category)
         {
             List<Product> listCategory = new List<Product>();

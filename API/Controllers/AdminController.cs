@@ -42,9 +42,9 @@ namespace API.Controllers
             return userRepos.insertUser(user);
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("delete-user/{id}")]
-        public Boolean Post([FromUri] int id)
+        public Boolean Post(string id)
         {
             return userRepos.deleteUser(id);
         }
