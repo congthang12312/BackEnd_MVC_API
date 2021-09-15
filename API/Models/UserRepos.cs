@@ -12,8 +12,8 @@ namespace API.Models
     {
         public static SqlConnection connectDatabase()
         {
-          //  string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
-            string connectionString = "Data Source = LAPTOP-7OO41Q78\\DCT; Initial Catalog = Project; Integrated Security = True";
+            string connectionString = "Data Source=ABS\\SQLEXPRESS;Initial Catalog=Project;Integrated Security=True";
+          //  string connectionString = "Data Source = LAPTOP-7OO41Q78\\DCT; Initial Catalog = Project; Integrated Security = True";
             //khoi tao sql server
             return new SqlConnection(connectionString);
         }
@@ -90,29 +90,35 @@ namespace API.Models
         public Boolean insertUser(User user)
         {
             SqlConnection connection = connectDatabase();
-            string sql = "INSERT INTO [dbo].[User](id,Fullnname,Username,Password,Adress,Email,Phone,CreateDate)" +
-                " VALUES(@id,@Fullnname,@Username,@Password,@Adress,@Email,@Phone,@CreateDate) ";
+            string sql = "INSERT INTO [dbo].[User](id,Fullname,Email,Password,GoogleID,FacebookID,Role,CreateAt,ModifyAt)" +
+                " VALUES(@id,@Fullname,@Email,@Password,@GoogleID,@FacebookID,@Role, @CreateAt, @ModifyAt) ";
             SqlCommand command = null;
             try
             {
                 connection.Open();
                 command = connection.CreateCommand();
                 command.CommandText = sql;
-                if(user != null){ 
-                command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
-                command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
-                command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
-                command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
-                command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
-                command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
-                command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
-                command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
-                // thuc thi cau lenh cho (them xoa sua)
-                int r = command.ExecuteNonQuery();
-                //
-                return true;
-                }return false;
+                Debug.WriteLine("hihi");
+                if (user != null)
+                {
+                    command.Parameters.Add("@id", SqlDbType.VarChar).Value = user.id;
+                    command.Parameters.Add("@fullname", SqlDbType.NVarChar).Value = user.fullname;
+                    command.Parameters.Add("@email", SqlDbType.VarChar).Value = user.email;
+                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = user.password;
+                    command.Parameters.Add("@googleID", SqlDbType.VarChar).Value = user.googleID;
+                    command.Parameters.Add("@facebookID", SqlDbType.VarChar).Value = user.facebookID;
+                    command.Parameters.Add("@role", SqlDbType.Int).Value = user.role;
+                    command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = user.createAt;
+                     command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = user.modifyAt;
+                    // thuc thi cau lenh cho (them xoa sua)
+
+                    int r = command.ExecuteNonQuery();
+
+                    if(r != -1) return true;
+                    return false;
+                    
+                }
+                return false;
             }
             catch (Exception e)
             {
@@ -247,5 +253,7 @@ namespace API.Models
             }
             return listHistory;
         }
+
+
     }
 }

@@ -24,7 +24,8 @@ namespace API.Helper
                     new Claim("ROLE", user.role.ToString()),
                     new Claim("EMAIL", user.email),
                 }),
-                Expires = DateTime.UtcNow.AddMinutes(30),
+                NotBefore = DateTime.UtcNow,
+                Expires = DateTime.UtcNow.AddMinutes(100),
                 SigningCredentials = new SigningCredentials(securityKey,
                 SecurityAlgorithms.HmacSha256Signature)
             };

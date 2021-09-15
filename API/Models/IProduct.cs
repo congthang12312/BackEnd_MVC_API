@@ -25,5 +25,7 @@ namespace API.Models
 
         Boolean addProduct(Product product);
 
+        Boolean addHistory(History_Buy history);
+
     }
 }

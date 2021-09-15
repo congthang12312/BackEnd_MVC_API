@@ -67,7 +67,11 @@ namespace API.Controllers
                 User isExist = userRepos.findUserByEmail(login.email);
                 if (isExist != null)
                 {
-                    bool isMatchPassword = String.Equals(login.password, isExist.password);
+                    Debug.WriteLine(login.email);
+                    Debug.WriteLine(login.password);
+                    String hashPassword = login.password + "00000000";
+                    if (login.email == "admin@gmail.com") hashPassword = login.password;
+                    bool isMatchPassword = String.Equals(hashPassword, isExist.password);
 
                     if (isMatchPassword == true)
                     {
@@ -121,40 +125,71 @@ namespace API.Controllers
         public DataRespon<String> registerLocal([FromBody] RegisterLocal useRegister)
         {
             DataRespon<String> respon = new DataRespon<String>();
+
             try
             {
+              
                 User isExist = userRepos.findUserByEmail(useRegister.email);
-
                 if (isExist == null)
                 {
                     Guid myuuid = Guid.NewGuid();
                     string generate_id = myuuid.ToString();
-                    User infoUser = new User();
-                    infoUser.id = generate_id;
-                    infoUser.role = 1;
-                    infoUser.fullname = useRegister.fullname;
-                    infoUser.email = useRegister.email;
-                    infoUser.password = useRegister.password;
-                    bool isCreateSuccess = userRepos.insertUser(infoUser);
-                    if (isCreateSuccess == true)
+
+                    User userToken = new User();
+                    userToken.id = generate_id;
+                    userToken.role = 1;
+                    userToken.fullname = useRegister.fullname;
+                    userToken.email = useRegister.email;
+                    userToken.password = userToken.hashPassword(useRegister.password);
+                    userToken.googleID = "null";
+                    userToken.facebookID = "null";
+                    DateTime localDate = DateTime.Now;
+                    userToken.createAt = localDate;
+                    userToken.modifyAt = localDate;
+
+                    Boolean rs = false;
+                    try
                     {
-                        infoUser.password = null;
-                        String token = TokenManager.generateToken(infoUser);
-                        respon.message = "Tạo tài khoản thành công!";
+                        rs = userRepos.insertUser(userToken);
+                        Debug.WriteLine("ket qua : " + rs);
+                    }
+                    catch (Exception ex)
+                    {
+                        Debug.WriteLine(ex);
+                    }
+                    if (rs == true)
+                    {
+                        // GENERATE TOKEN
+                        String token = TokenManager.generateToken(userToken);
+
+                        // VALIDATE TOKEN
+                        // User de_token = TokenManager.ValidateToken(token);
+                        // SET CLAIMS REQUEST
+                        // ClaimsPrincipal hehe = TokenManager.GetPrincipal(token);
+                        // LOG PROPERTY
+                        //Debug.WriteLine("Gi day ta == " + hehe.FindFirst("ROLE").Value);
+
+
+
+                        var webRequest = System.Net.WebRequest.Create("https://localhost:44308");
+                        webRequest.Headers.Add("Authorization", "Bearer " + token);
+                        respon.message = "Tạo tài khoản thành công";
                         respon.error = false;
                         respon.data = token;
                         return respon;
                     }
                     else
                     {
-                        respon.message = "Tạo tài khoản thất bại!";
+                        respon.message = "Không thể tạo tài khoản!";
                         respon.error = true;
                         respon.data = null;
                         return respon;
                     }
+
                 }
                 else
                 {
+                    // emmail da ton tai
                     respon.message = "emailExist";
                     respon.error = true;
                     respon.data = null;

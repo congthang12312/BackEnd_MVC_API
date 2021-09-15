@@ -317,6 +317,52 @@ namespace API.Models
                 }
             }
 
+            
+
+        }
+
+        public Boolean addHistory(History_Buy history)
+        {
+            string sql = "INSERT INTO [History_Buy] (idUser,idProduct,quantity,address,createAt,modifyAt)" +
+                   "VALUES(@idUser,@idProduct ,@quantity ,@address,@createAt ,@modifyAt )";
+            SqlCommand command = null;
+            try
+            {
+                sqlCon.Open();
+                command = sqlCon.CreateCommand();
+                command.CommandText = sql;
+
+                if (history != null)
+                {
+                    command.Parameters.Add("@idUser", SqlDbType.VarChar).Value = history.idUser;
+                    command.Parameters.Add("@idProduct", SqlDbType.NVarChar).Value = history.idProduct;
+                    command.Parameters.Add("@quantity", SqlDbType.Int).Value = history.quantity;
+                    command.Parameters.Add("@address", SqlDbType.NVarChar).Value = history.address;
+                    command.Parameters.Add("@createAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    command.Parameters.Add("@modifyAt", SqlDbType.DateTime).Value = DateTime.Now;
+                    int r = command.ExecuteNonQuery();
+                    if (r != -1)
+                        return true;
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+                return false;
+            }
+            finally
+            {
+                if (sqlCon != null)
+                {
+                    sqlCon.Close();
+                }
+            }
+
         }
 
     }

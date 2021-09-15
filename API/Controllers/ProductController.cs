@@ -90,5 +90,20 @@ namespace API.Controllers
             return prodRepos.listProductInPage(page, 9);
 
         }
+
+        [Route("history-buy/{iduse}/{idproduct}/{quanntity}/{address}")]
+        [HttpGet]
+        public Boolean insertHistoryBuy(string iduse, string idproduct, int quanntity, string address)
+        {
+            History_Buy history_Buy = new History_Buy();
+            history_Buy.idUser = iduse;
+            history_Buy.idProduct = idproduct;
+            history_Buy.quantity = quanntity;
+            history_Buy.address = address;
+
+            return prodRepos.addHistory(history_Buy);
+
+        }
+
     }
 }
